@@ -1,0 +1,101 @@
+// Estilos de la version anterior, no sé aun si funcionan del todo por ellos están comentados - Diego Cáceres Cardoza
+// .portlet-dockbar, .portlet-borderless-bar, .lfr-meta-actions, .modal-hidden, html.aui{
+//   display: none;
+// }
+// .portlet-dockbar .navbar .collapse{
+//   display: block;
+// }
+
+// .aui{
+//   .portlet-dockbar{
+//     position: relative !important;
+//   }
+//   .portlet-dockbar, .portlet-borderless-bar, .lfr-meta-actions{
+//     display: block;
+//   }
+//   .portlet-dockbar .navbar .collapse{
+//     display: block;
+//   }
+//   .modal{
+//     display: block;
+//     &.modal-hidden{
+//       display: none;
+//     }
+//   }
+//    .dockbar.navbar-static-top .collapse{
+//      display: block;
+//    }
+// }
+
+//Fix espacio superior antes de empezar #lienzoB
+.navbar {
+  &.navbar-static-top {
+    &.dockbar {
+      border: 0;
+      margin-bottom: 0;
+      min-height: 0px;
+    }
+  }
+}
+
+//Fix de barra de administración
+.navbar-inner {
+  .container {
+    .collapse {
+      display: block;
+    }
+  }
+}
+
+.dockbar .nav-account-controls > li > a {
+  padding: 0 !important;
+}
+
+.dockbar .nav-account-controls > li > a.user-notification-link {
+  padding: 5px !important;
+}
+
+.dockbar .navbar-inner .nav li.staging-toggle span {
+  font-size: 15px;
+}
+
+.dockbar .nav-account-controls .staging-controls .staging-toggle .branching-enabled.publish-link-container .publish-link {
+  background-color: #53bf02 !important;
+  padding: 7px !important;
+}
+
+.dockbar .navbar-inner .nav li.staging-toggle.active > a {
+  background-color: transparent;
+}
+
+//Fix Client Settings
+.portlet-boundary {
+  .portlet-boundary_clientsettings_WAR_clientsettingsportlet_ {
+    display: none;
+    visibility: visible;
+  }
+}
+
+// Sobreescribiendo estilos para controles de administración
+
+// Ocultando los controles de administración
+.controls {
+  &-visible {
+  }
+  &-hidden {
+    .portlet-dockbar {
+      .dockbar {
+        .navbar-inner {
+          .container {
+            .nav-collapse {
+              .nav-account-controls {
+                display: none;
+                visibility: hidden;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

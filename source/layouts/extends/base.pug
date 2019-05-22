@@ -1,0 +1,532 @@
+doctype html
+html(lang="es-ES").aui
+  head
+    meta(charset='utf-8')
+    meta(name='viewport' ,content='width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1')
+    title #{data.tituloCNE} | Movistar
+    meta(name='description', content="Movistar")
+    meta(name='keywords', content="")
+    meta(name='author', content="")
+    //- Theme color (Only Chrome Mobile)
+    meta(name="theme-color", content="#00385d")
+    //- Facebook meta tags
+    meta(property='og:title', content="")
+    meta(property='og:description', content="")
+    meta(property='og:type', content="")
+    meta(property='og:url', content="")
+    meta(property='og:image', content="")
+    //- Evitar Cache
+    meta(http-equiv='Expires', content='0')
+    meta(http-equiv='Last-Modified', content='0')
+    meta(http-equiv='Cache-Control', content='no-cache, mustrevalidate')
+    meta(http-equiv='Pragma', content='no-cache')
+
+    //- Favicon
+    link(href='http://www.movistar.com.pe/colportal-peru-v2-theme/images/favicon.ico', rel='Shortcut Icon')
+
+    //- Hojas de estilo de nuevo portal (no incluir)
+    link(href="http://cms.movistar.com.pe/canalonline-peru-theme/css/aui.css?browserId=other&themeId=canalonlineperu_WAR_canalonlineperutheme&minifierType=css&languageId=es&b=6210&t=1544240272000", rel='stylesheet')
+    link(href="http://cms.movistar.com.pe/html/css/main.css?browserId=other&themeId=canalonlineperu_WAR_canalonlineperutheme&minifierType=css&languageId=es&b=6210&t=1383354338000", rel='stylesheet')
+    link(href="http://cms.movistar.com.pe/html/portlet/asset_publisher/css/main.css?browserId=other&themeId=canalonlineperu_WAR_canalonlineperutheme&minifierType=css&languageId=es&b=6210&t=1544249046000", rel='stylesheet')
+    link(href="http://cms.movistar.com.pe/html/portlet/journal_content/css/main.css?browserId=other&themeId=canalonlineperu_WAR_canalonlineperutheme&minifierType=css&languageId=es&b=6210&t=1544249046000", rel='stylesheet')
+    link(href="http://cms.movistar.com.pe/colportal-time-portlet/css/endpoint/time-endpoint.css?browserId=other&themeId=canalonlineperu_WAR_canalonlineperutheme&minifierType=css&languageId=es&b=6210&t=1544248913000", rel='stylesheet')
+    link(href="http://cms.movistar.com.pe/client-settings-portlet/css/main.css?browserId=other&themeId=canalonlineperu_WAR_canalonlineperutheme&minifierType=css&languageId=es&b=6210&t=15442490820000", rel='stylesheet')
+    link(href="http://cms.movistar.com.pe/html/portlet/staging_bar/css/main.css?browserId=other&themeId=canalonlineperu_WAR_canalonlineperutheme&minifierType=css&languageId=es&b=6210&t=1544249046000", rel='stylesheet')
+    link(href="http://cms.movistar.com.pe/notifications-portlet/notifications/css/main.css?browserId=other&themeId=canalonlineperu_WAR_canalonlineperutheme&minifierType=css&languageId=es&b=6210&t=1544248913000", rel='stylesheet')
+    link(href="http://cms.movistar.com.pe/html/portlet/dynamic_data_mapping/css/main.css?browserId=other&themeId=canalonlineperu_WAR_canalonlineperutheme&minifierType=css&languageId=es&b=6210&t=1544249046000", rel='stylesheet')
+    link(href="http://cms.movistar.com.pe/colportal-time-portlet/css/notification/time-notification.css?browserId=other&themeId=canalonlineperu_WAR_canalonlineperutheme&minifierType=css&languageId=es&b=6210&t=1544248913000", rel='stylesheet')
+    link(href="http://cms.movistar.com.pe/canalonline-peru-theme/css/main.css?browserId=other&themeId=canalonlineperu_WAR_canalonlineperutheme&minifierType=css&languageId=es&b=6210&t=1544240272000", rel='stylesheet')
+    link(href="http://cms.movistar.com.pe/combo/?browserId=other&minifierType=&languageId=es&b=6210&t=1544249005000&/html/js/aui/aui-sortable-layout/assets/skins/sam/aui-sortable-layout.css", rel='stylesheet')
+    
+    //- css compilado de style.scss
+    link(rel='stylesheet', href='css/style.css')
+
+  body.movistar--green
+    //-url = "http://cms.movistar.com.pe"
+    -url = ""
+
+    #wrapper
+      header(id="navigation" class="navigation__wrapper navigation__wrapper--white")
+        .navigation-secondary
+          .navigation-secondary-container
+            ul.navigation-secondary__block
+              li.navigation-secondary__item
+                a(href="http://cms.movistar.com.pe/web/guest-staging/personas" class="navigation-secondary__user-type active") Personas
+              li.navigation-secondary__item
+                a(href="http://cms.movistar.com.pe/web/guest-staging/negocios" class="navigation-secondary__user-type") Negocios
+        .navigation__container
+          .navigation__header
+            .navigation__logo-container
+              .navigation__title
+                a(href="http://cms.movistar.com.pe/web/guest-staging/home" class="navigation__logo")
+                  svg(id="logo-movistar-svg" x="0px" y="0px" width="52px" height="38px" viewBox="0 0 52 38" class="navigation__logo--svg")
+                    path(id="logo-movistar" d="M9.835,4.473c-2.424,0.038-6.898,1.233-8.942,9.58c-0.891,3.638-1.235,7.429-0.473,11.94c0.703,4.162,1.948,7.754,2.787,9.733c0.29,0.683,0.738,1.394,1.084,1.832c0.996,1.259,2.654,1.179,3.35,0.835c0.76-0.374,1.633-1.276,1.317-3.337c-0.153-0.996-0.593-2.452-0.841-3.263c-0.761-2.484-1.773-5.482-1.861-7.617c-0.119-2.857,1.008-3.23,1.756-3.396c1.258-0.277,2.312,1.104,3.314,2.835c1.195,2.066,3.245,5.728,4.916,8.522c1.509,2.524,4.293,5.227,8.765,5.042c4.56-0.19,7.92-1.93,9.651-7.405c1.295-4.097,2.178-7.159,3.6-10.294c1.633-3.605,3.813-5.535,5.648-4.946c1.704,0.548,2.129,2.213,2.15,4.661c0.018,2.166-0.233,4.554-0.427,6.308c-0.071,0.637-0.199,1.916-0.147,2.628c0.103,1.397,0.708,2.794,2.282,3.017c1.676,0.238,3.021-1.102,3.558-2.721c0.212-0.64,0.393-1.615,0.49-2.309c0.493-3.5,0.621-5.852,0.398-9.433c-0.259-4.188-1.078-8.005-2.508-11.31c-1.368-3.159-3.565-5.186-6.381-5.364c-3.119-0.197-6.698,1.872-8.575,5.886c-1.73,3.7-3.115,7.499-3.955,9.437c-0.851,1.967-2.103,3.179-4.027,3.382c-2.353,0.246-4.381-1.462-5.866-3.897c-1.295-2.123-3.86-6.165-5.233-7.523C14.375,6.021,12.902,4.425,9.835,4.473")
+                  span.navigation__logo-text
+                    svg(id="logo-movistar-text-svg" x="0px" y="0px" width="136px" height="24px" viewBox="0 0 136 24" class="navigation__logo-text--svg")
+                      path(id="logo-movistar-text" d="M118.512,4.743c-1.072-0.46-2.701-0.769-4.808-0.769h-0.257c-1.284,0-3.033,0.157-4.717,0.461c-0.285,0.052-0.396,0.197-0.396,0.524v2.403c0,0.3,0.154,0.403,0.495,0.354c1.478-0.222,3.002-0.377,4.173-0.377h0.167c1.658,0,2.998,0.152,3.806,0.696c0.803,0.541,1.201,1.346,1.201,3.096v0.518c-1.217-0.258-2.683-0.427-4.027-0.427h-0.356c-2.24,0-4.343,0.541-5.685,1.793c-1.03,0.962-1.709,2.412-1.709,4.263v0.157c0,3.725,2.572,6.021,7.797,6.021h0.93c2.053,0,4.004-0.611,5.18-1.581c1.35-1.117,1.873-2.769,1.873-5.411v-5.381C122.178,7.405,120.742,5.704,118.512,4.743zM118.176,16.372c0,1.409-0.046,2.238-0.557,2.825c-0.543,0.623-1.504,0.918-2.807,0.918h-0.633c-2.404,0-3.803-0.965-3.803-2.816c0-0.846,0.334-1.601,0.852-2.047c0.609-0.525,1.502-0.782,3.033-0.782h0.34c1.158,0,2.479,0.116,3.574,0.404V16.372zM134.898,3.973h-2.153c-3.095,0-5.511,1.072-6.546,3.317c-0.447,0.967-0.586,2.263-0.586,3.662V22.75c0,0.262,0.127,0.367,0.395,0.367h3.217c0.268,0,0.387-0.105,0.387-0.367v-9.869c0-1.394,0.029-2.409,0.101-3.036c0.183-1.635,1.177-2.405,3.489-2.405h1.712c0.276,0,0.397-0.142,0.397-0.408V4.38C135.311,4.108,135.177,3.973,134.898,3.973zM57.755,23.117h3.484c0.3,0,0.432-0.098,0.555-0.328c2.257-4.247,5.708-11.504,5.944-18.084c0.008-0.262-0.101-0.374-0.441-0.374l-3.246,0.001c-0.378,0-0.482,0.121-0.503,0.458c-0.15,2.398-0.659,5.182-1.397,7.668c-0.763,2.571-1.733,5.02-2.663,6.84c-0.93-1.82-1.901-4.269-2.663-6.84c-0.744-2.502-1.256-5.306-1.401-7.715c-0.022-0.342-0.206-0.411-0.538-0.411h-3.268c-0.346,0-0.442,0.161-0.416,0.512c0.458,6.447,2.463,11.455,5.942,17.959C57.265,23.032,57.45,23.117,57.755,23.117zM83.626,14.693c0.867,0.321,1.588,0.587,2.447,0.892c1.84,0.654,2.627,1.172,2.627,2.297c0,1.456-1.226,2.229-4.001,2.229h-0.102c-1.564,0-3.359-0.309-4.936-0.813c-0.326-0.104-0.505,0.02-0.505,0.347v2.399c0,0.301,0.051,0.484,0.389,0.601c1.505,0.52,3.582,0.811,5.277,0.811h0.129c4.929,0,7.603-2.191,7.603-5.738v-0.052c0-1.368-0.451-2.606-1.289-3.431c-0.822-0.809-2.072-1.436-4-2.152c-1.027-0.382-1.826-0.677-2.539-0.938c-1.603-0.585-2.052-1.135-2.052-1.959c0-1.361,1.335-1.895,3.483-1.895l0.164,0.001c1.24,0,2.74,0.178,4.562,0.509c0.337,0.062,0.528-0.013,0.528-0.36V4.976c0-0.324-0.088-0.415-0.422-0.486c-1.184-0.251-3.332-0.515-4.538-0.515h-0.29c-2.516,0-4.383,0.468-5.625,1.552c-1.012,0.88-1.688,2.212-1.688,3.803v0.114c0,1.474,0.512,2.663,1.387,3.472C81.055,13.672,82.157,14.149,83.626,14.693zM103.424,23.117c0.274,0,0.426-0.149,0.426-0.392v-2.679c0-0.241-0.151-0.391-0.426-0.391h-0.427c-1.276,0-2.062-0.309-2.541-0.813c-0.636-0.669-0.767-1.755-0.767-3.042V7.663h3.539c0.267,0,0.399-0.104,0.399-0.365V4.697c0-0.262-0.133-0.363-0.399-0.363h-3.539V0.962c0-0.262-0.133-0.367-0.4-0.367h-3.217c-0.268,0-0.391,0.105-0.391,0.367v15.057c0,2.621,0.52,4.293,1.672,5.438c1.082,1.073,2.771,1.66,5.217,1.66H103.424zM21.103,3.975h-0.971c-2.794,0-4.649,0.742-5.548,1.844h-0.021c-0.899-1.102-2.87-1.844-5.664-1.844H7.901c-3.15,0-5.731,1.096-6.768,3.341c-0.447,0.967-0.592,2.263-0.592,3.663v11.708c0,0.259,0.15,0.431,0.413,0.431h3.172c0.261,0,0.411-0.172,0.411-0.431l0.007-9.752c0-1.396,0.033-2.409,0.104-3.034C4.83,8.264,6.044,7.469,8.36,7.469h0.265c2.313,0,3.586,0.795,3.767,2.432c0.07,0.625,0.104,1.639,0.104,3.034v9.757c0,0.257,0.158,0.426,0.419,0.426h3.18c0.261,0,0.41-0.203,0.41-0.46l0.004-9.723c0-1.396,0.034-2.409,0.104-3.034c0.182-1.637,1.451-2.432,3.767-2.432h0.266c2.315,0,3.527,0.795,3.711,2.432c0.068,0.625,0.101,1.639,0.101,3.034v9.757c0,0.266,0.155,0.426,0.417,0.426h3.18c0.261,0,0.409-0.203,0.409-0.46V10.979c0-1.4-0.149-2.696-0.594-3.663C26.835,5.07,24.251,3.975,21.103,3.975zM48.444,18.898c0.387-1.278,0.603-2.748,0.603-5.182c0-2.432-0.216-3.907-0.603-5.182c-0.977-3.263-3.553-4.561-7.732-4.561h-0.498c-4.179,0-6.755,1.298-7.737,4.561c-0.383,1.274-0.6,2.75-0.6,5.182c0,2.434,0.217,3.903,0.6,5.182c0.982,3.262,3.558,4.562,7.737,4.562h0.498C44.891,23.46,47.467,22.16,48.444,18.898zM44.83,16.457c-0.311,3.045-1.848,3.521-4.317,3.521H40.41c-2.468,0-4.007-0.477-4.313-3.521c-0.098-0.92-0.174-1.681-0.174-2.74c0-1.061,0.076-1.82,0.174-2.741c0.306-3.046,1.845-3.521,4.313-3.521h0.103c2.469,0,4.006,0.476,4.317,3.521c0.097,0.921,0.172,1.681,0.172,2.741C45.002,14.776,44.927,15.537,44.83,16.457zM74.656,4.336h-3.217c-0.269,0-0.396,0.104-0.396,0.366l0.004,18.048c0,0.262,0.127,0.367,0.395,0.367h3.216c0.269,0,0.397-0.105,0.397-0.367L75.051,4.702C75.051,4.44,74.925,4.336,74.656,4.336z")
+            .navigation__login-container
+              a(href="#!" class="waves-effect navigation__login")
+                span.icon-MiCuenta-Masa.navigation__login-icon
+            .navigation__toogle-container
+              button(type="button" class="navigation__toogle js-toogle-top-navigation waves-effect waves-light")
+                span.sr-only Toggle navigation
+                span.navigation__toogle-bar
+                span.navigation__toogle-bar
+                span.navigation__toogle-bar
+          #desktopnavigation
+            .dnavigation__slider
+              ul(role="menubar" data-menu="main" class="dnavigation")
+                li(class=" dnavigation__item")
+                  .dnavigation__link.dnavigation__children
+                    span Productos y servicios
+                    span.icon-keyboard_arrow_down.dnavigation__icon
+                  .dnavigation__submenu-container
+                    ul.dnavigation__submenu
+                      li
+                        .dnavigation__title
+                          span Movistar Total
+                          a(href="http://cms.movistar.com.pe/web/guest-staging/movistar-total-header" class="sr-only") Movistar Total
+                        ul.dnavigation__submenu__2
+                          li(class="")
+                            a(href="http://cms.movistar.com.peurl" class="dnavigation__link" atm-label="Productos y servicios - Movistar Total - ¿Qué es Movistar Total?")
+                              span ¿Qué es Movistar Total?
+                          li(class="")
+                            a(href="http://www.movistar.com.pe/movistar-total?tab=planes" class="dnavigation__link" atm-label="Productos y servicios - Movistar Total - ¡Contrata!")
+                              span ¡Contrata!
+                          li(class="")
+                            a(href="http://www.movistar.com.pe/total-combo-movil-trio-beneficios" class="dnavigation__link" atm-label="Productos y servicios - Movistar Total - ¡Ya soy!")
+                              span ¡Ya soy!
+                      li
+                        .dnavigation__title
+                          span Servicios Hogar
+                          a(href="http://cms.movistar.com.pe" class="sr-only") Servicios Hogar
+                        ul.dnavigation__submenu__2
+                          li(class="")
+                            a(href="http://cms.movistar.com.pe/web/guest-staging/hogar/trios" class="dnavigation__link" atm-label="Productos y servicios - Servicios Hogar - Tríos")
+                              span Tríos
+                          li(class="")
+                            a(href="http://cms.movistar.com.pe/web/guest-staging/hogar/duos" class="dnavigation__link" atm-label="Productos y servicios - Servicios Hogar - Dúo")
+                              span Dúo
+                          li(class="")
+                            a(href="http://www.movistar.com.pe/hogar/internet/solo-internet" class="dnavigation__link" atm-label="Productos y servicios - Servicios Hogar - Solo Internet")
+                              span Solo Internet
+                          li(class="")
+                            a(href="http://www.movistar.com.pe/aumenta-tu-velocidad-internet" class="dnavigation__link" atm-label="Productos y servicios - Servicios Hogar - Aumenta tu velocidad")
+                              span Aumenta tu velocidad
+                      li
+                        .dnavigation__title
+                          span Equipos
+                          a(href="http://cms.movistar.com.pe" class="sr-only") Equipos
+                        ul.dnavigation__submenu__2
+                          li(class="")
+                            a(href="http://catalogo.movistar.com.pe/smartphones" class="dnavigation__link" atm-label="Productos y servicios - Equipos - Smartphones")
+                              span Smartphones
+                          li(class="")
+                            a(href="http://catalogo.movistar.com.pe/outlet" class="dnavigation__link" atm-label="Productos y servicios - Equipos - Outlet Movistar")
+                              span Outlet Movistar
+                          li(class="")
+                            a(href="http://www.movistar.com.pe/hogar/experiencia-tv" class="dnavigation__link" atm-label="Productos y servicios - Equipos - Deco Smart")
+                              span Deco Smart
+                          li(class="")
+                            a(href="http://www.movistar.com.pe/hogar/servicio-adicional/repetidor-smart-wifi" class="dnavigation__link" atm-label="Productos y servicios - Equipos - Repetidor Smart Wifi")
+                              span Repetidor Smart Wifi
+                      li
+                        .dnavigation__title
+                          span Móvil Postpago
+                          a(href="http://cms.movistar.com.pe" class="sr-only") Móvil Postpago
+                        ul.dnavigation__submenu__2
+                          li(class="")
+                            a(href="http://cms.movistar.com.pe/web/guest-staging/productos-y-servicios/catalogo-de-equipos/portabilidad" class="dnavigation__link" atm-label="Productos y servicios - Móvil Postpago - Portabilidad")
+                              span Portabilidad
+                          li(class="")
+                            a(href="http://www.movistar.com.pe/movil/postpago/renueva-tu-equipo?path=validacion" class="dnavigation__link" atm-label="Productos y servicios - Móvil Postpago - Renueva tu equipo")
+                              span Renueva tu equipo
+                          li(class="")
+                            a(href="http://cms.movistar.com.pe/web/guest-staging/movil/postpago/roaming" class="dnavigation__link" atm-label="Productos y servicios - Móvil Postpago - Roaming")
+                              span Roaming
+                      li
+                        .dnavigation__title
+                          span Móvil Prepago
+                          a(href="http://cms.movistar.com.pe" class="sr-only") Móvil Prepago
+                        ul.dnavigation__submenu__2
+                          li(class="")
+                            a(href="http://cms.movistar.com.pe/web/guest-staging/prepago/preplan" class="dnavigation__link" atm-label="Productos y servicios - Móvil Prepago - Preplan")
+                              span Preplan
+                          li(class="")
+                            a(href="https://www.movistar.com.pe/prepago/paquetes" class="dnavigation__link" atm-label="Productos y servicios - Móvil Prepago - Promociones")
+                              span Promociones
+                          li(class="")
+                            a(href="http://cms.movistar.com.pe/web/guest-staging/prepago/recargas" class="dnavigation__link" atm-label="Productos y servicios - Móvil Prepago - Recarga")
+                              span Recarga
+                          li(class="")
+                            a(href="http://cms.movistar.com.pe/web/guest-staging/prepago/beneficios" class="dnavigation__link" atm-label="Productos y servicios - Móvil Prepago - Beneficios")
+                              span Beneficios
+                li(class=" dnavigation__item")
+                  a(href="http://catalogo.movistar.com.pe/smartphones" class="dnavigation__link dnavigation__no-children")
+                    span Tienda
+                li(class=" dnavigation__item")
+                  .dnavigation__link.dnavigation__children
+                    span Beneficios
+                    span.icon-keyboard_arrow_down.dnavigation__icon
+                  .dnavigation__submenu-container
+                    ul.dnavigation__submenu
+                      li
+                        .dnavigation__title
+                          span Más Beneficios para Ti
+                          a(href="http://cms.movistar.com.pe" class="sr-only") Más Beneficios para Ti
+                        ul.dnavigation__submenu__2
+                          li(class="")
+                            a(href="http://cms.movistar.com.pe/web/guest-staging/beneficios/mas-beneficios-para-ti/movistar-play" class="dnavigation__link" atm-label="Beneficios - Más Beneficios para Ti - Movistar Play")
+                              span Movistar Play
+                          li(class="")
+                            a(href="http://cms.movistar.com.pe/web/guest-staging/beneficios/mas-beneficios-para-ti/movistar-prix" class="dnavigation__link" atm-label="Beneficios - Más Beneficios para Ti - Movistar Prix")
+                              span Movistar Prix
+                          li(class="")
+                            a(href="http://cms.movistar.com.pe/web/guest-staging/beneficios/movistar-musica" class="dnavigation__link" atm-label="Beneficios - Más Beneficios para Ti - Movistar Música")
+                              span Movistar Música
+                          li(class="")
+                            a(href="https://store.movistar.com/sc/pe/movstore/?stdb=1541185264" class="dnavigation__link" atm-label="Beneficios - Más Beneficios para Ti - Movistar Store")
+                              span Movistar Store
+                          li(class="")
+                            a(href="http://cms.movistar.com.pe/web/guest-staging/hogar/canales-exclusivos" class="dnavigation__link" atm-label="Beneficios - Más Beneficios para Ti - Canales Exclusivos")
+                              span Canales Exclusivos
+                li(class=" dnavigation__item")
+                  a(href="http://cms.movistar.com.pe/web/guest-staging/atencion-al-cliente" class="dnavigation__link dnavigation__no-children")
+                    span Atención al Cliente
+              .dnavigation__container-icons
+          .mi-movistar-login
+            a(href="#!" class="mi-movistar-login__button waves-effect waves-light" data-gtm-type="commonClick" data-gtm-category="Mi Movistar" data-gtm-action="pruebas_col_plantilla" data-gtm-label="Ingresar") Mi Movistar
+          .modal.bottom-sheet.search-modal#desktop-search-modal
+            .modal-header
+              a(href="#!" class="js-dismiss-desktop-search-modal waves-effect search-modal__dismiss")
+                span(class="sr-only") Dismiss Search Modal
+                span(class="icon-close")
+            .modal-content
+              .container
+                .row
+                  .link-list
+                    .link-list__title section title
+                    .link-list__item 
+                      a(href="#" class="link-list__link") Cambiar nombre WiFi y contraseña
+                    .link-list__item 
+                      a(href="#" class="link-list__link") Coste adicional Roaming
+                    .link-list__item 
+                      a(href="#" class="link-list__link") Bloquear el celular en caso de robo
+          .mlnavigation#mlnavigation
+            .mlmenu__header
+              .mlmenu__header-inner
+                .mlmenu__nav
+                  .mlmenu__nav-inner
+                    .mlmenu__nav-slide
+                      .input-field.mlmenu__nav__select
+                        .select-wrapper.md
+                          span.caret ▼
+                          input(type="text" class="select-dropdown" readonly="true" data-activates="select-options-c98520dc-8654-e32b-6864-087e21275e46" value="Personas")
+                          ul.dropdown-content.select-dropdown#select-options-c98520dc-8654-e32b-6864-087e21275e46
+                            li(class="")
+                              span Personas
+                            li(class="")
+                              span Negocios
+                          select(class="md initialized" onchange="location = this.options[this.selectedIndex].value;")
+                            option(value="http://cms.movistar.com.pe/web/guest-staging/personas") Personas
+                            option(value="http://cms.movistar.com.pe/web/guest-staging/negocios") Negocios
+                      .mlmenu__back-container
+                        a(href="#" class="mlmenu__back waves-effect waves-light")
+                          span(class="icon-navigate_before")
+                          span(class="mlmenu__back-text")
+            .mlmenu__container
+              nav.mlmenu#navigationMobile
+                ul(role="menubar" data-menu="main" class="mlmenu__sub-menu mlmenu__sub-menu--current")
+                  li(class="mlmenu__level")
+                    a(data-submenu="submenu-0" href="http://cms.movistar.com.pe" class="mlmenu__link" data-gtm-type="commonClick" data-gtm-category="opciones menu" data-gtm-action="click" data-gtm-label="Productos y servicios" data-gtm-value="")
+                      span(class="mlmenu__link-text") Productos y servicios
+                      span(class="icon-navigate_next")
+                  li(class="mlmenu__level")
+                    a(data-submenu="submenu-1" href="http://cms.movistar.com.pe/web/guest-staging/atencion-al-cliente" class="mlmenu__link" data-gtm-type="commonClick" data-gtm-category="opciones menu" data-gtm-action="click" data-gtm-label="Atención al Cliente" data-gtm-value="")
+                      span(class="mlmenu__link-text") Atención al Cliente
+                  li(class="mlmenu__level")
+                    a(data-submenu="submenu-2" href="http://cms.movistar.com.pe" class="mlmenu__link" data-gtm-type="commonClick" data-gtm-category="opciones menu" data-gtm-action="click" data-gtm-label="Beneficios" data-gtm-value="")
+                      span(class="mlmenu__link-text") Beneficios
+                      span(class="icon-navigate_next")
+                  li(class="mlmenu__level")
+                    a(data-submenu="submenu-3" href="http://cms.movistar.com.peurl" class="mlmenu__link" data-gtm-type="commonClick" data-gtm-category="opciones menu" data-gtm-action="click" data-gtm-label="Tienda" data-gtm-value="")
+                      span(class="mlmenu__link-text") Tienda
+                ul(data-menu="submenu-0" class="mlmenu__sub-menu submenu-0")
+                  li(class="mlmenu__level")
+                    a(data-submenu="submenu-0-0" href="http://cms.movistar.com.pe/web/guest-staging/movistar-total-header" class="mlmenu__link" data-gtm-type="commonClick" data-gtm-category="opciones menu" data-gtm-action="click" data-gtm-label="Movistar Total" data-gtm-value="")
+                      span(class="mlmenu__link-text") Movistar Total
+                      span(class="icon-navigate_next")
+                  li(class="mlmenu__level")
+                    a(data-submenu="submenu-0-1" href="http://cms.movistar.com.pe" class="mlmenu__link" data-gtm-type="commonClick" data-gtm-category="opciones menu" data-gtm-action="click" data-gtm-label="Servicios Hogar" data-gtm-value="")
+                      span(class="mlmenu__link-text") Servicios Hogar
+                      span(class="icon-navigate_next")
+                  li(class="mlmenu__level")
+                    a(data-submenu="submenu-0-2" href="http://cms.movistar.com.pe" class="mlmenu__link" data-gtm-type="commonClick" data-gtm-category="opciones menu" data-gtm-action="click" data-gtm-label="Equipos" data-gtm-value="")
+                      span(class="mlmenu__link-text") Equipos
+                      span(class="icon-navigate_next")
+                  li(class="mlmenu__level")
+                    a(data-submenu="submenu-0-3" href="http://cms.movistar.com.pe" class="mlmenu__link" data-gtm-type="commonClick" data-gtm-category="opciones menu" data-gtm-action="click" data-gtm-label="Móvil Postpago" data-gtm-value="")
+                      span(class="mlmenu__link-text") Móvil Postpago
+                      span(class="icon-navigate_next")
+                  li(class="mlmenu__level")
+                    a(data-submenu="submenu-0-4" href="http://cms.movistar.com.pe" class="mlmenu__link" data-gtm-type="commonClick" data-gtm-category="opciones menu" data-gtm-action="click" data-gtm-label="Móvil Prepago" data-gtm-value="")
+                      span(class="mlmenu__link-text") Móvil Prepago
+                      span(class="icon-navigate_next")
+                ul(data-menu="submenu-2" class="mlmenu__sub-menu submenu-2")
+                  li(class="mlmenu__level")
+                    a(data-submenu="submenu-2-0" href="http://cms.movistar.com.pe" class="mlmenu__link" data-gtm-type="commonClick" data-gtm-category="opciones menu" data-gtm-action="click" data-gtm-label="Más Beneficios para Ti" data-gtm-value="")
+                      span(class="mlmenu__link-text") Más Beneficios para Ti
+                      span(class="icon-navigate_next")
+                ul(data-menu="submenu-0-0" class="mlmenu__sub-menu submenu-0-0")
+                  li(class="mlmenu__level")
+                    a(href="http://cms.movistar.com.peurl" class="mlmenu__link" data-gtm-type="commonClick" data-gtm-category="opciones menu" data-gtm-action="click" data-gtm-label="¿Qué es Movistar Total?" data-gtm-value="")
+                      span(class="mlmenu__link-text") ¿Qué es Movistar Total?
+                  li(class="mlmenu__level")
+                    a(href="http://www.movistar.com.pe/movistar-total?tab=planes" class="mlmenu__link" data-gtm-type="commonClick" data-gtm-category="opciones menu" data-gtm-action="click" data-gtm-label="¡Contrata!" data-gtm-value="")
+                      span(class="mlmenu__link-text") ¡Contrata!
+                  li(class="mlmenu__level")
+                    a(href="http://www.movistar.com.pe/total-combo-movil-trio-beneficios" class="mlmenu__link" data-gtm-type="commonClick" data-gtm-category="opciones menu" data-gtm-action="click" data-gtm-label="¡Ya soy!" data-gtm-value="")
+                      span(class="mlmenu__link-text") ¡Ya soy!
+                ul(data-menu="submenu-0-1" class="mlmenu__sub-menu submenu-0-1")
+                  li(class="mlmenu__level")
+                    a(href="http://cms.movistar.com.pe/web/guest-staging/hogar/trios" class="mlmenu__link" data-gtm-type="commonClick" data-gtm-category="opciones menu" data-gtm-action="click" data-gtm-label="Tríos" data-gtm-value="")
+                      span(class="mlmenu__link-text") Tríos
+                  li(class="mlmenu__level")
+                    a(href="http://cms.movistar.com.pe/web/guest-staging/hogar/duos" class="mlmenu__link" data-gtm-type="commonClick" data-gtm-category="opciones menu" data-gtm-action="click" data-gtm-label="Dúo" data-gtm-value="")
+                      span(class="mlmenu__link-text") Dúo
+                  li(class="mlmenu__level")
+                    a(href="http://www.movistar.com.pe/hogar/internet/solo-internet" class="mlmenu__link" data-gtm-type="commonClick" data-gtm-category="opciones menu" data-gtm-action="click" data-gtm-label="Solo Internet" data-gtm-value="")
+                      span(class="mlmenu__link-text") Solo Internet
+                  li(class="mlmenu__level")
+                    a(href="http://www.movistar.com.pe/aumenta-tu-velocidad-internet" class="mlmenu__link" data-gtm-type="commonClick" data-gtm-category="opciones menu" data-gtm-action="click" data-gtm-label="Aumenta tu velocidad" data-gtm-value="")
+                      span(class="mlmenu__link-text") Aumenta tu velocidad
+                ul(data-menu="submenu-0-2" class="mlmenu__sub-menu submenu-0-2")
+                  li(class="mlmenu__level")
+                    a(href="http://catalogo.movistar.com.pe/smartphones" class="mlmenu__link" data-gtm-type="commonClick" data-gtm-category="opciones menu" data-gtm-action="click" data-gtm-label="Smartphones" data-gtm-value="")
+                      span(class="mlmenu__link-text") Smartphones
+                  li(class="mlmenu__level")
+                    a(href="http://catalogo.movistar.com.pe/outlet" class="mlmenu__link" data-gtm-type="commonClick" data-gtm-category="opciones menu" data-gtm-action="click" data-gtm-label="Outlet Movistar" data-gtm-value="")
+                      span(class="mlmenu__link-text") Outlet Movistar
+                  li(class="mlmenu__level")
+                    a(href="http://www.movistar.com.pe/hogar/experiencia-tv" class="mlmenu__link" data-gtm-type="commonClick" data-gtm-category="opciones menu" data-gtm-action="click" data-gtm-label="Deco Smart" data-gtm-value="")
+                      span(class="mlmenu__link-text") Deco Smart
+                  li(class="mlmenu__level")
+                    a(href="http://www.movistar.com.pe/hogar/servicio-adicional/repetidor-smart-wifi" class="mlmenu__link" data-gtm-type="commonClick" data-gtm-category="opciones menu" data-gtm-action="click" data-gtm-label="Repetidor Smart Wifi" data-gtm-value="")
+                      span(class="mlmenu__link-text") Repetidor Smart Wifi
+                ul(data-menu="submenu-0-3" class="mlmenu__sub-menu submenu-0-3")
+                  li(class="mlmenu__level")
+                    a(href="http://cms.movistar.com.pe/web/guest-staging/productos-y-servicios/catalogo-de-equipos/portabilidad" class="mlmenu__link" data-gtm-type="commonClick" data-gtm-category="opciones menu" data-gtm-action="click" data-gtm-label="Portabilidad" data-gtm-value="")
+                      span(class="mlmenu__link-text") Portabilidad
+                  li(class="mlmenu__level")
+                    a(href="http://www.movistar.com.pe/movil/postpago/renueva-tu-equipo?path=validacion" class="mlmenu__link" data-gtm-type="commonClick" data-gtm-category="opciones menu" data-gtm-action="click" data-gtm-label="Renueva tu equipo" data-gtm-value="")
+                      span(class="mlmenu__link-text") Renueva tu equipo
+                  li(class="mlmenu__level")
+                    a(href="http://cms.movistar.com.pe/web/guest-staging/movil/postpago/roaming" class="mlmenu__link" data-gtm-type="commonClick" data-gtm-category="opciones menu" data-gtm-action="click" data-gtm-label="Roaming" data-gtm-value="")
+                      span(class="mlmenu__link-text") Roaming
+                ul(data-menu="submenu-0-4" class="mlmenu__sub-menu submenu-0-4")
+                  li(class="mlmenu__level")
+                    a(href="http://cms.movistar.com.pe/web/guest-staging/prepago/preplan" class="mlmenu__link" data-gtm-type="commonClick" data-gtm-category="opciones menu" data-gtm-action="click" data-gtm-label="Preplan" data-gtm-value="")
+                      span(class="mlmenu__link-text") Preplan
+                  li(class="mlmenu__level")
+                    a(href="https://www.movistar.com.pe/prepago/paquetes" class="mlmenu__link" data-gtm-type="commonClick" data-gtm-category="opciones menu" data-gtm-action="click" data-gtm-label="Promociones" data-gtm-value="")
+                      span(class="mlmenu__link-text") Promociones
+                  li(class="mlmenu__level")
+                    a(href="http://cms.movistar.com.pe/web/guest-staging/prepago/recargas" class="mlmenu__link" data-gtm-type="commonClick" data-gtm-category="opciones menu" data-gtm-action="click" data-gtm-label="Recarga" data-gtm-value="")
+                      span(class="mlmenu__link-text") Recarga
+                  li(class="mlmenu__level")
+                    a(href="http://cms.movistar.com.pe/web/guest-staging/prepago/beneficios" class="mlmenu__link" data-gtm-type="commonClick" data-gtm-category="opciones menu" data-gtm-action="click" data-gtm-label="Beneficios" data-gtm-value="")
+                      span(class="mlmenu__link-text") Beneficios
+                ul(data-menu="submenu-2-0" class="mlmenu__sub-menu submenu-2-0")
+                  li(class="mlmenu__level")
+                    a(href="http://cms.movistar.com.pe/web/guest-staging/beneficios/mas-beneficios-para-ti/movistar-play" class="mlmenu__link" data-gtm-type="commonClick" data-gtm-category="opciones menu" data-gtm-action="click" data-gtm-label="Movistar Play" data-gtm-value="")
+                      span(class="mlmenu__link-text") Movistar Play
+                  li(class="mlmenu__level")
+                    a(href="http://cms.movistar.com.pe/web/guest-staging/beneficios/mas-beneficios-para-ti/movistar-prix" class="mlmenu__link" data-gtm-type="commonClick" data-gtm-category="opciones menu" data-gtm-action="click" data-gtm-label="Movistar Prix" data-gtm-value="")
+                      span(class="mlmenu__link-text") Movistar Prix
+                  li(class="mlmenu__level")
+                    a(href="http://cms.movistar.com.pe/web/guest-staging/beneficios/movistar-musica" class="mlmenu__link" data-gtm-type="commonClick" data-gtm-category="opciones menu" data-gtm-action="click" data-gtm-label="Movistar Música" data-gtm-value="")
+                      span(class="mlmenu__link-text") Movistar Música
+                  li(class="mlmenu__level")
+                    a(href="https://store.movistar.com/sc/pe/movstore/?stdb=1541185264" class="mlmenu__link" data-gtm-type="commonClick" data-gtm-category="opciones menu" data-gtm-action="click" data-gtm-label="Movistar Store" data-gtm-value="")
+                      span(class="mlmenu__link-text") Movistar Store
+                  li(class="mlmenu__level")
+                    a(href="http://cms.movistar.com.pe/web/guest-staging/hogar/canales-exclusivos" class="mlmenu__link" data-gtm-type="commonClick" data-gtm-category="opciones menu" data-gtm-action="click" data-gtm-label="Canales Exclusivos" data-gtm-value="")
+                      span(class="mlmenu__link-text") Canales Exclusivos
+                .mlmenu--login
+            .mlmenu__close.js-toogle-top-navigation
+
+      #content
+        .columns-1(id="main-content" role="main")
+          .portlet-layout.row-fluid
+            .portlet-column.portlet-column-only.span12.yui3-dd-drop(id="column-1")
+              .portlet-dropzone.portlet-column-content.portlet-column-content-only(id="layout-column_column-1")
+                .portlet-boundary.portlet-boundary_56_.portlet-borderless.portlet-journal-content.portlet-draggable.yui3-dd-drop(id="p_p_id_56_INSTANCE_OylfzsFI7o3Y_")
+                  span#p_56_INSTANCE_OylfzsFI7o3Y
+                  .portlet-borderless-container
+                    .portlet-body
+                      .journal-content-article
+                        //************************************************//
+                        // HTML compilado de index.pug, eliminar el style //
+                        //************************************************//
+                        #lienzoB_millon
+                          block header
+                          #container
+                            block content
+                        //************************************************//
+                        //                     FIN                        //
+                        //************************************************//
+      footer
+        .footer-large-wrapper
+          .footer-large-wrapper-logo
+            .container
+              .row
+                .col.s12
+                  .footer-large__container
+                    .footer-large__logo
+                      img(src="http://cms.movistar.com.pe/canalonline-peru-theme/images/logo-footer.png" alt="Logo-Telefonica" class="footer-large__logo-img")
+          .footer-large-wrapper-links#yui_patched_v3_11_0_1_1549398793208_932
+            .container-full
+              .row
+                .col.s12
+                  ul.footer-large-links.js-mobile-only-collapsible
+                    li.footer-large-links-block
+                      .collapsible-header
+                        .footer-large__title
+                          span Movistar Total
+                          span.icon-keyboard_arrow_down.footer-large__icon
+                      ul.collapsible-body
+                        li
+                          a(href="http://cms.movistar.com.pe/web/guest-staging/-que-es" class="footer-large__url")
+                            span(class="footer-large__url-title") ¿Qué es?
+                        li
+                          a(href="http://cms.movistar.com.pe/web/guest-staging/contrata" class="footer-large__url")
+                            span(class="footer-large__url-title") ¡Contrata!
+                        li
+                          a(href="http://cms.movistar.com.pe/web/guest-staging/ya-soy" class="footer-large__url")
+                            span(class="footer-large__url-title") ¡Ya soy!
+                    li.footer-large-links-block
+                      .collapsible-header
+                        .footer-large__title
+                          span Hogar
+                          span.icon-keyboard_arrow_down.footer-large__icon
+                      ul.collapsible-body
+                        li
+                          a(href="http://cms.movistar.com.pe/web/guest-staging/hogar-trios" class="footer-large__url")
+                            span(class="footer-large__url-title") Tríos
+                        li
+                          a(href="http://cms.movistar.com.pe/web/guest-staging/hogar-duos" class="footer-large__url")
+                            span(class="footer-large__url-title") Dúo
+                        li
+                          a(href="http://cms.movistar.com.pe/web/guest-staging/hogar-solo-internet" class="footer-large__url")
+                            span(class="footer-large__url-title") Solo Internet
+                        li
+                          a(href="http://cms.movistar.com.pe/web/guest-staging/hogar-aumenta-tu-velocidad" class="footer-large__url")
+                            span(class="footer-large__url-title") Aumenta tu velocidad
+                    li.footer-large-links-block
+                      .collapsible-header
+                        .footer-large__title
+                          span Postpago
+                          span.icon-keyboard_arrow_down.footer-large__icon
+                      ul.collapsible-body
+                        li
+                          a(href="http://cms.movistar.com.pe/web/guest-staging/footer_portabilidad" class="footer-large__url")
+                            span(class="footer-large__url-title") Portabilidad
+                        li
+                          a(href="http://cms.movistar.com.pe/web/guest-staging/postpago-renueva-tu-equipo" class="footer-large__url")
+                            span(class="footer-large__url-title") Renueva tu equipo
+                        li
+                          a(href="http://cms.movistar.com.pe/web/guest-staging/postpago/roaming" class="footer-large__url")
+                            span(class="footer-large__url-title") Roaming
+                    li.footer-large-links-block
+                      .collapsible-header
+                        .footer-large__title
+                          span Prepago
+                          span.icon-keyboard_arrow_down.footer-large__icon
+                      ul.collapsible-body
+                        li
+                          a(href="http://cms.movistar.com.pe/web/guest-staging/prepago-pre-plan" class="footer-large__url")
+                            span(class="footer-large__url-title") Preplan
+                        li
+                          a(href="http://cms.movistar.com.pe/web/guest-staging/promociones" class="footer-large__url")
+                            span(class="footer-large__url-title") Promociones
+                        li
+                          a(href="http://cms.movistar.com.pe/web/guest-staging/prepago-recarga" class="footer-large__url")
+                            span(class="footer-large__url-title") Recarga
+                        li
+                          a(href="http://cms.movistar.com.pe/web/guest-staging/prepago-beneficios" class="footer-large__url")
+                            span(class="footer-large__url-title") Beneficios
+                    li.footer-large-links-block
+                      .collapsible-header
+                        .footer-large__title
+                          span Beneficios
+                          span.icon-keyboard_arrow_down.footer-large__icon
+                      ul.collapsible-body
+                        li
+                          a(href="http://cms.movistar.com.pe/web/guest-staging/movistarplaay" class="footer-large__url")
+                            span(class="footer-large__url-title") Movistar Play
+                        li
+                          a(href="http://cms.movistar.com.pe/web/guest-staging/movistarprix" class="footer-large__url")
+                            span(class="footer-large__url-title") Movistar Prix
+                        li
+                          a(href="http://cms.movistar.com.pe/web/guest-staging/movistarmusica" class="footer-large__url")
+                            span(class="footer-large__url-title") Movistar Música
+                        li
+                          a(href="http://cms.movistar.com.pe/web/guest-staging/movistarstoree" class="footer-large__url")
+                            span(class="footer-large__url-title") Movistar Store
+                    li.footer-large-links-block
+                      .collapsible-header
+                        .footer-large__title
+                          span Atención al cliente
+                          span.icon-keyboard_arrow_down.footer-large__icon
+                      ul.collapsible-body
+                        li
+                          a(href="http://cms.movistar.com.pe/web/guest-staging/mi-movistar-movil" class="footer-large__url")
+                            span(class="footer-large__url-title") Mi Movistar Móvil
+                        li
+                          a(href="http://cms.movistar.com.pe/web/guest-staging/mimovistarhogar" class="footer-large__url")
+                            span(class="footer-large__url-title") Mi Movistar Hogar
+                        li
+                          a(href="http://cms.movistar.com.pe/web/guest-staging/whatsaapp" class="footer-large__url")
+                            span(class="footer-large__url-title") WhatsApp
+                        li
+                          a(href="http://cms.movistar.com.pe/web/guest-staging/messengeer" class="footer-large__url")
+                            span(class="footer-large__url-title") Messenger
+
+                    li.footer-large-links-block
+                      .collapsible-header
+                        .footer-large__title
+                          span Regulación y legales
+                          span.icon-keyboard_arrow_down.footer-large__icon
+                      ul.collapsible-body
+                        li
+                          a(href="http://cms.movistar.com.pe/web/guest-staging/reclamoos" class="footer-large__url")
+                            span(class="footer-large__url-title") Reclamos
+                        li
+                          a(href="http://cms.movistar.com.pe/web/guest-staging/informacion-abonados-y-usuarios" class="footer-large__url")
+                            span(class="footer-large__url-title") Información abonados y usuarios
+                        li
+                          a(href="http://cms.movistar.com.pe/web/guest-staging/calidadosiptel" class="footer-large__url")
+                            span(class="footer-large__url-title") Calidad OSIPTEL
+                        li
+                          a(href="http://cms.movistar.com.pe/web/guest-staging/coberturainalambrica" class="footer-large__url")
+                            span(class="footer-large__url-title") Cobertura Inalámbrica
+                        li
+                          a(href="http://cms.movistar.com.pe/web/guest-staging/uso-de-la-red-en-casoo-de-emergencia" class="footer-large__url")
+                            span(class="footer-large__url-title") Uso de la red en caso de emergencia
+                        li
+                          a(href="http://cms.movistar.com.pe/web/guest-staging/librodereclamaciones" class="footer-large__url")
+                            span(class="footer-large__url-title") Libro de Reclamaciones
+                        li
+                          a(href="http://cms.movistar.com.pe/web/guest-staging/medioambiente" class="footer-large__url")
+                            span(class="footer-large__url-title") Medio Ambiente
+                        li
+                          a(href="http://cms.movistar.com.pe/web/guest-staging/centro-de-privacidad" class="footer-large__url")
+                            span(class="footer-large__url-title") Centro de Privacidad
+
+    //- Dependencias del CMS Liferay
+    script(src="http://cdn.alloyui.com/2.0.0/aui/aui-min.js")
+    script(src='http://servicios.movistar.com.pe/migracion/js/vendor/jquery.1.10.1.min.js')
+    //- jQuery Librerias
+    //- script(src='js/vendor/vendor_all.js')
+    //- Compilado de application.js
+    script(src='js/bundle.js?v=123')

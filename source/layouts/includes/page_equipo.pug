@@ -1,0 +1,162 @@
+#page-equipo-portabilidad(style="display:none")
+  .equipo-goback
+    a(href="#") Regresar a equipos en Portabilidad
+  .container-equipo
+    .equipo-content
+      .container-equipo-foto
+        .img-equipo
+          img.img-frontal#equipmentImage(src=url+"/documents/80379/8777288/iphone_defrente.png", alt="")
+        //-.img-equipo
+          img.img-reverse(src=url+"/documents/80379/8777288/iphone_reverso.png", alt="")
+      .container-equipo-description
+        .equipo-block
+          .equipo-name
+            h2#modelEquipment
+          .box-options
+            .equipo-selector.__plan
+              p Elige un plan:
+              select.select-plan#equipmentPlans
+            .equipo-selector.__cuotas
+              p Elige tu tipo de pago:
+              select.select-cuota#equipmentCuotas
+                option(value='0') Pagar equipo al contado
+                option(value='1' selected) Pagar equipo en 12 cuotas
+          .box_info
+            .equipo-plan-wrapper
+              .equipo-plan
+                .p-title #[b Detalle del plan:]
+                .wrapper-p-item
+                  .p-item
+                    .img
+                      img(src=url+"/documents/80379/8777288/detalle_plan_1.png/", alt="")
+                    p #[span#dataFreeValue] #[br] #[span#dataFreeName] 
+                  .p-item
+                    .img
+                      img(src=url+"/documents/80379/8777288/detalle_plan_3.png/", alt="")
+                    p #[span#appIlimitatedValue] Apps #[br]ilimitadas
+                    span.tooltip-equip ¡
+                      .tooltip
+                        span Incluye: #[span#listApps]
+                  .p-item
+                    .img
+                      img(src=url+"/documents/80379/8777288/detalle_plan_5.png/", alt="")
+                    p #[span#dataInterValue] #[span#dataInterName] + #[br]Whatsapp Ilimitado
+                  .p-item
+                    .img
+                      img(src=url+"/documents/80379/8777288/detalle_plan_2.png/", alt="")
+                    p #[span#smsValue] #[br]#[span#smsName]
+                  .p-item
+                    .img
+                      img(src=url+"/documents/80379/8777288/detalle_plan_4.png/", alt="")
+                    p #[span#minutesValue] #[span#minutesName]
+                p.text Contrato por 12 meses
+            .info
+              .info-precio
+                p Precio:
+                .precio-item
+                  .price_equipo Precio del equipo: 
+                    span S/ 
+                    span#priceEquipment
+                    span  al mes
+                  .price_equipo_online Precio del equipo: 
+                    span S/ 
+                    span#priceEquipmentOnline 535
+                  .price_plan Precio del plan 
+                    span S/
+                    span#pricePlan
+                    span  al mes
+              .info-pago
+                p.text_title Total a pagar al mes
+                .precio-item
+                    span S/ 
+                    span#totalPrice 
+                p.text_legal El pago del equipo y del plan es a 12 meses sin intereses y sin cuota inicial. Sujeto a #[br]evaluación crediticia.
+            .btn_compra
+              a(href="#") Comprar ahora
+  .container_tabs_information
+    .tabs_title
+      .container
+        .box_tabs
+          .properties_title 
+          .properties_tabs
+            .properties_tab.pesTab-js
+              .wrapper
+                .title Características
+              #contenidoMobile1-js
+            .properties_tab.pesTab-js 
+              .wrapper
+                .title Especificaciones técnicas
+              #contenidoMobile2-js
+    .tabs_inf
+      .wrapper_tab
+        .acordeon_mobile.acordeon-js
+          .title Características
+          .ancle
+        .tab1.conTab-js.acordeon-info-js
+          .container
+            .info
+              .caract
+                p#featuresText1 Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quam, aliquam harum dicta debitis error nulla fugiat possimus voluptatibus dolorum rerum beatae. Quas aut tenetur eius voluptas ut cum possimus delectus.
+              .figure
+                .img
+                  img#featuresImage1.desktop(src=url+"/documents/80379/8777288/caracteristica_1.png/", alt="", srcset="")
+            .info
+              .caract
+                p#featuresText2 Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quam, aliquam harum dicta debitis error nulla fugiat possimus voluptatibus dolorum rerum beatae. Quas aut tenetur eius voluptas ut cum possimus delectus.
+              .figure
+                .img
+                  img#featuresImage2(src=url+"/documents/80379/8777288/caracteristica_2.png/", alt="", srcset="")
+            .info
+              .caract
+                p#featuresText3 Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quam, aliquam harum dicta debitis error nulla fugiat possimus voluptatibus dolorum rerum beatae. Quas aut tenetur eius voluptas ut cum possimus delectus.
+              .figure
+                .img
+                  img#featuresImage3.desktop(src=url+"/documents/80379/8777288/caracteristica_1.png/", alt="", srcset="")
+      .wrapper_tab
+        .acordeon_mobile.acordeon-js 
+          .title Especificaciones técnicas
+          .ancle
+        .tab2.conTab-js.acordeon-info-js
+          .container
+            .properties_title 
+            .box_et
+              .technical_spec
+                .ts_icon
+                  img(src=url+"/documents/80379/8777288/icon_pantalla.png", alt="")
+                .ts_info
+                  b #[span Pantalla] #[br]
+                  span.et_caract#screenSize 4.7"
+              .technical_spec
+                .ts_icon
+                  img(src=url+"/documents/80379/8777288/icon_camara.png", alt="")
+                .ts_info
+                  b #[span Cámara] #[br]
+                  span.et_caract #[span#mainCamera] principal #[br] #[span#frontalCamera] frontal
+              .technical_spec
+                .ts_icon
+                  img(src=url+"/documents/80379/8777288/icon_memoria.png", alt="")
+                .ts_info
+                  b #[span Memoría] #[br]
+                  span.et_caract#memory
+              .technical_spec
+                .ts_icon
+                  img(src=url+"/documents/80379/8777288/icon_procesador.png", alt="")
+                .ts_info          
+                  b #[span Procesador] #[br]
+                  span.et_caract#processor 
+              .technical_spec
+                .ts_icon
+                  img(src=url+"/documents/80379/8777288/icon_sistema_operativo.png", alt="")
+                .ts_info          
+                  b #[span Sistema Operativo] #[br]
+                  span.et_caract #[span#soType] #[br] #[span#soVersion]
+
+  .acordeon_contenedor
+    .container
+      .box_acordeon
+        .acordeon__titulo.acordeon-js       
+          .title Condiciones de los Planes Elige Más
+          .ancle
+        .acordeon__contenido.acordeon-info-js
+          p Planes Elige más disponibles para clientes Postpago Residencial con DNI y/o RUC 10 que deseen adquirir líneas nuevas, realizar portabilidad, cambio de equipo y/o cambio de plan con un plan postpago residencial. Movistar Play y Apps Ilimitadas permiten navegar ilimitadamente  solo en cobertura 4G LTE. Movistar podrá actualizar las aplicaciones dentro de Apps Ilimitadas. Minutos Todo Destino permiten llamar a todo operador nacional y para realizar llamadas a celulares o teléfonos fijos de USA y Canadá. Para realizar llamadas a USA y Canadá, el cliente deberá usar el código de llamada por llamada de TDP-1911. Para llamadas de Larga Distancia Internacional a otros países aplican tarifas adicionales. Los minutos son tasados al segundo. Megas internacionales: se descontarán de los megas libres del plan, y Whatsapp (solo texto) se activa luego de finalizado los megas internacionales. Movistar Play: permite acceder a contenido online y programación en vivo de canales de televisión exclusivos a Movistar a través de www.movistarplay.com.pe. Para navegar en la red 4G LTE, el cliente deberá contar con un equipo 4G con chip 4G y encontrarse en zona de cobertura 4G. Planes Elige Más desde S/ 79.90 en adelante válidos a nivel nacional excepto en el Departamento de Loreto. Apps Ilimitadas y Movistar Play Ilimitado no aplica para las contrataciones en Departamento de Loreto.
+

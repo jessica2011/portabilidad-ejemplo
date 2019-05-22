@@ -1,0 +1,40 @@
+#beneficios-portabilidad{
+  font-family: 'Telefonica-Light';
+  padding: 30px 0;
+  background-color: #f4f4f3;
+  h2{
+    color:#50535a;
+    text-align: center;
+    font-size: 36px;
+    padding: 0 20px;
+  }
+  .container{
+    .box-benefit{
+      display: flex;
+      flex-wrap: wrap;
+      width: 100%;
+      justify-content: space-between;
+      padding: 20px 0 0 0;
+      .benefit{
+        text-align: center;
+        width: 50%;
+        padding: 30px 0;
+        .benefit_icon{
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          height: 100px;
+        }
+        .benefit_description{
+          color: #63666d;
+          font-size: 16px;
+          p{
+            font-size: 18px;
+            font-weight: bold;
+          }
+  
+        }
+      }
+    }
+  }
+}

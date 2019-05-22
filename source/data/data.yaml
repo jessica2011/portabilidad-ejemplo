@@ -1,0 +1,16 @@
+---
+tituloCNE: Landing-Movistar-Total
+tituloPagina: Movistar
+urlCMS: http://cms.movistar.com.pe/web/guest-staging/movistartotal
+variante:  Variante principal
+version: 8002525
+ubiContenido: Movil/Productos/Transversal/Landing-TodosMovistar
+ubiMultimedia: Movil/Productos/Transversal/Landing-TodosMovistar
+external: http://servicios.movistar.com.pe/files-landing-movistar-todos
+comentarios: Landing informativo sobre el servicio Movistar Total.
+# http://yaml.org/type/map.html -----------------------------------------------#
+
+
+# http://yaml.org/type/timestamp.html -----------------------------------------#
+timestamp:
+  canonical: 2001-12-15T02:59:43.1Z

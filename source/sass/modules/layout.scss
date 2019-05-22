@@ -1,0 +1,29 @@
+#lienzoB_millon {
+  position: relative;
+  transition: all 0.35s ease-in-out;
+}
+
+#container {
+  overflow: hidden;
+}
+
+// forzar el padding de aui
+
+.aui {
+  body {
+    #wrapper {
+      #content {
+        //padding-top: 25px !important;
+      }
+    }
+  }
+}
+
+//Sections
+@import "sections/banner";
+@import "sections/equipos";
+@import "sections/planes";
+@import "sections/pasos_online";
+@import "sections/requisitos";
+@import "sections/beneficios";
+@import "sections/page_equipo";

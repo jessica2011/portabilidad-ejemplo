@@ -1,0 +1,37 @@
+#requisitos_portabilidad{
+  font-family: 'Telefonica-Light';
+  padding: 50px 0;
+  background-color: #5bc500;
+  color:#ffffff;
+  h2{
+    text-align: center;
+    font-size: 36px;
+    padding: 0 20px;
+  }
+  .container{
+    .box-requirement{
+      display: flex;
+      flex-wrap: wrap;
+      width: 100%;
+      justify-content: space-between;
+      padding: 20px 0 0 0;
+      .requirement{
+        text-align: center;
+        width: 26%;
+        padding: 30px 0;
+        .requirement_icon{
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          height: 100px;
+        }
+        .requirement_description{
+          p{
+            font-size: 16px;
+          }
+  
+        }
+      }
+    }
+  }
+}

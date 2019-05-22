@@ -1,0 +1,92 @@
+.hand {
+  font-family: 'Telefonica-Hand';
+}
+
+#banner-portabilidad {
+  font-family: 'Telefonica-Light';
+
+  .item-banner {
+    position: relative;
+    width: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 500px;
+    // margin-top: -56px;
+    margin-top: -20px;
+
+    &._1 {
+      background-image: url($url+"/documents/80379/8777288/1950x500_bh_portabilidad_op.jpg/");
+    }
+
+    .curva {
+      width: 100%;
+      height: 501px;
+      background-image: url($url+"/canalonline-peru-theme/images/hero-desktop-curve.png");
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: bottom;
+    }
+
+    .information {
+      width: 100%;
+      position: absolute;
+      top: 0;
+      color: #fff;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      height: 100%;
+
+      .text {
+        // opacity: .8;
+        color: #fff;
+        letter-spacing: .2px;
+        line-height: 24px;
+        font-weight: normal;
+        font-size: 20px;
+        padding: 10px 0;
+        margin: 0;
+      }
+
+      h1 {
+        color: #fff;
+        font-weight: 300;
+        font-size: 62px;
+        line-height: 73px;
+        overflow: hidden;
+        padding: 10px 0;
+        margin: 0;
+        position: relative;
+      }
+    }
+
+    .sticker {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: absolute;
+      bottom: 0;
+      background-image: url($url+"/documents/80379/8777288/Sticker_portabilidad.png/");
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: bottom;
+      height: 154px;
+      width: 176px;
+      z-index: 100;
+      // right: 15%;
+      // top: 45%;
+      margin: auto 0;
+      right: 20%;
+      top: 35%;
+
+      p {
+        color: #fff;
+        font-size: 30px;
+        text-align: center;
+        line-height: 1.2;
+        padding: 0 0 0 20px;
+      }
+    }
+  }
+}
